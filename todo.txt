@@ -1,0 +1,27 @@
+- "paste" mode - Copy list of files (vs. directories) not working during GetFiles()
+- Copy hook
+- test exceptions again with multithread
+- threaded uses up a ton of CPU
+- Save "overwrite?" queries until rest of copy is finished
+- retest everything with multiple directories
+  - read errors
+  - write errors
+  - pause/resume
+  - md5 verify
+
+
+Bugs:
+
+- Double destination didn't make the second MD5 check on separate drives (?)
+- Need to verify before overwriting MD5/SHA files
+
+"TCopy -u -M to.md5 -s ." doesn't work
+-u causes errors when it gets to "from.md5"
+
+X TCopy -u says 0/total even if some % of the items have been skipped
+
+Tcopy --paste --md5 with dirs that exist in the target confuse the MD5
+TCopy --recover - use temporary file for info/dir list
+TCopy - verify needs to flush the SD card or external drive somehow
+
+TCopy dir1 dir2 will copy all files from dir1 onto file "dir2" if dir2 doesn't exist

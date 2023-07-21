@@ -1,0 +1,58 @@
+v1.0.58
+- fixed "--md5 with file source instead of directory source" errors
+- fixed drivespace check with file source instead of directory source
+- added "verify that target file is the same size as source file"
+- switched -c to NOT copy attributes
+
+v1.0.59
+ - fixed creation of hash file when target directory doesn't exist and -S is used
+ - fixed -r option with File.ReadWrite on the write stream
+
+v1.0.60
+ - Added WriteThrough to -r option
+
+v1.0.61
+ - Skipping readonly files during (r)esume operations
+
+v1.0.62
+ - Skipping readonly file logic was also skipping hash verify step
+
+v1.0.63
+ - Added -j option
+
+v1.0.64
+ - Ignore source/dest size mismatch for URLs
+
+v1.0.65
+ - Added -X options
+
+v1.0.66
+ - Really ignore source/dest size mismatch for URLs
+
+v1.0.67
+ - Catch errors in GetResponse
+
+v1.0.68
+ - -z option wasn't advancing the write position
+
+v1.0.69
+ - Added (r)etry option for reader/writer/size comparison
+
+v1.0.70
+ - Fixed bytes transferred if retrying after a size comparison failure
+ - Added ACL copying with -l option
+
+v1.0.71
+ - Added owner copying with -L option
+
+v1.0.72
+ - Fixed logging errors during ACL/Owner settings
+
+v1.0.73
+ - Allow retries during ACL/owner errors.
+
+v1.0.74
+- Added --nohead option
+
+v1.0.75
+- Fixed directory size calculation when passing in just a wildcard for the source (e.g. "*.txt")
